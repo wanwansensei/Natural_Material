@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: homare0827
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  web:
+    build: .
+    command: rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/Natural_Material
+    ports:
+      - "3000:3000"
+    links:
+      - db
