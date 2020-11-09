@@ -5,12 +5,14 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: homare0827
-
-  adminer:
-    image: adminer
-    restart: always
     ports:
-      - 8080:8080
+      - "3306:3306"
+
+ # adminer:
+  #  image: adminer
+  #  restart: always
+  #  ports:
+  #    - 8080:8080
 
   web:
     build: .

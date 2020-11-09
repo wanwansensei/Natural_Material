@@ -1,0 +1,16 @@
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <small>
+    <a href="#"></a>
+  </small>
+    <ul  class="ml-auto">
+      <li><%= link_to "このアプリについて","about_path" %></li>
+      <li><%= link_to "お問い合わせ", "contact_path" %></li>
+    </ul> 
+</nav>-->
+
+<footer class="footer navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+
+    <%= link_to "お問い合わせ", {:controller => :static_pages, :action =>:contact},:class => "ml-auto"%>
+  </div>
+</footer>
