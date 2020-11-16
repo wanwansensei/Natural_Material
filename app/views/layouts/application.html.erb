@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> <%= yield(:title).presence %> | デフォルト</title>
-    <%= csrf_meta_tags %>
+    <title> <%= yield(:title)%></title>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
